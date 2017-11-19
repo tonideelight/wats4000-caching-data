@@ -19,6 +19,8 @@ export default {
   },
   methods: {
     removeCity: function (city) {
+      this.favoriteCities.splice(this.favoriteCities.indexOf(city), 1);
+      this.$ls.set('favoriteCities', this.favoriteCities);
       // TODO: Add logic to remove a city from the `favoriteCities` array.
       // Hint: Use `indexOf(city)` on the `this.favoriteCities` array and then use the `splice()` method
 
